@@ -8,4 +8,7 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult VerificarDatos(string username,string contraseña){
+        
+    }
 }
