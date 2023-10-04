@@ -7,7 +7,7 @@ class BD{
 
  public static bool VerificarDatos(string username,string contraseña){
 
-    string query="SELECT * FROM Usuarios WHERE Username=@bUsername AND Constraseña=@bContraseña";
+    string query="SELECT * FROM Usuarios WHERE Username=@bUsername AND Contraseña=@bContraseña";
     Usuario result=null;
 
     using(SqlConnection BD=new SqlConnection(_connectionString)){

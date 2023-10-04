@@ -28,7 +28,7 @@ public class AccountController : Controller
         }
 
     }
-    public IActionResult VerificarLogin(Usuario U){
+    public IActionResult VerificarRegistrarse(Usuario U){
 
         if(BD.VerificarUsername(U.username)){
         ViewBag.Existe=true;
