@@ -1,0 +1,9 @@
+<form onsubmit="return ChequearModificacion()" Action='@Url.Action("ModificarContraseña")'>
+    <input class="Input" type="text" name="Username" placeholder="Nombre de usuario">
+    <input  class="Input" type="password" name="Contraseña" placeholder="Nueva contraseña" id="ContraseñaModificar1" >
+    <input  class="Input" type="password" placeholder="Ingrese nuevamente la contraseña" id="ContraseñaModificar2">
+    <input type="submit" class = "siguiente" value="Siguiente">
+
+    </form>
+    <p class="aviso">@ViewBag.Error</p>
+

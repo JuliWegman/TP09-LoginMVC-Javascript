@@ -1,6 +1,9 @@
-<a href='@Url.Action("Registrarse")'><button class = "registrarse">Registrarse</button></a>
 <form Action='@Url.Action("VerificarLogin")'>
     <input type="text" name="Username" placeholder="Nombre de usuario">
     <input type="password" name="Contraseña" placeholder="Contraseña">
     <input type="submit" class = "siguiente" value="Siguiente">
 </form>
+<a href='@Url.Action("Registrarse")'><button class = "registrarse">Registrarse</button></a>
+<a href='@Url.Action("OlvidoContraseña")'><button class = "Olvido">Olvide mi contraseña</button></a>
+
+    <p class="aviso">@ViewBag.Error</p>

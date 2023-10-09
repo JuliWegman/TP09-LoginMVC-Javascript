@@ -9,21 +9,22 @@ public class AccountController : Controller
         return View();
     }
     public IActionResult Login(){
-        ViewBag.Existe=false;
+        ViewBag.Error="";
         return View();
     }
     public IActionResult Registrarse(){
-        ViewBag.Existe=true;
+        ViewBag.Error="";
         return View();
     }
     public IActionResult OlvidoContraseña(){
+        ViewBag.Error="";
         return View();
     }
     public IActionResult VerificarLogin(string Username,string Contraseña){
         if(BD.VerificarDatos(Username,Contraseña)){
             return RedirectToAction("pagina");
         }else{
-            ViewBag.Existe=false;
+            ViewBag.Existe=true;
             return View("Login");
         }
 
@@ -31,7 +32,7 @@ public class AccountController : Controller
     public IActionResult VerificarRegistrarse(Usuario U){
 
         if(BD.VerificarUsername(U.username)){
-        ViewBag.Existe=true;
+        ViewBag.Error="Ese nombre de usuario ya está en uso, elegir otro";
             return View("Registrarse");
         }else{
             BD.Registrarse(U);
@@ -42,4 +43,18 @@ public class AccountController : Controller
     public IActionResult pagina(){
         return View();
     }
+    public IActionResult ModificarContraseña(string Username, string Contraseña){
+        if(BD.VerificarUsername(Username)){
+            BD.CambiarContraseña(Contraseña,Username);
+            Console.WriteLine("bien");
+            ViewBag.Error="Contraseña modificada correctamente";
+            return View("login");
+        }else{
+            Console.WriteLine("mal");
+            ViewBag.Error="No existe un usuario con ese username";
+            return RedirectToAction("OlvidoContraseña");
+
+        }
+    }
+
 }

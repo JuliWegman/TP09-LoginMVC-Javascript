@@ -1,10 +1,12 @@
 <a href='@Url.Action("Login")'><button class = "acceder">Ingresar</button></a>
-<form onsubmit="ChequearRegistro()" Action='@Url.Action("VerificarRegistrarse")'>
-    <input onkeyup="Contra1()" class="Input" type="text" name="Username" placeholder="Nombre de usuario">
-    <input class="Input" type="password" name="Contraseña" placeholder="Contraseña" id="ContraseñaRegistrar1" onkeyup="Contra1()">
-    <input class="Input" type="password" name="Contraseña" placeholder="Ingrese nuevamente la contraseña" id="ContraseñaRegistrar2">
+<form onsubmit="return ChequearRegistro()" Action='@Url.Action("VerificarRegistrarse")'>
+    <input class="Input" type="text" name="Username" placeholder="Nombre de usuario">
+    <input onkeyup="Contra1()" class="Input" type="password" name="Contraseña" placeholder="Contraseña" id="ContraseñaRegistrar1" >
+    <input onkeyup="Contra2()"  class="Input" type="password" name="Contraseña" placeholder="Ingrese nuevamente la contraseña" id="ContraseñaRegistrar2">
     <input class="Input" type="date" name="fechaNacimiento">
     <input class="Input" type="text" name="email" placeholder="email">
     <input class="Input" type="text" name="telefono" placeholder="numero de telefono" id="telefono">
     <input type="submit" class = "siguiente" value="Siguiente">
 </form>
+
+<p class="aviso" id="avisoErrorRegistrarse">@ViewBag.Error</p>

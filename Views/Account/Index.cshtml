@@ -2,6 +2,16 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>TP XX - Index</h1>
-<a href='@Url.Action("Login")'><button class = "acceder">Ingresar</button></a>
-<a href='@Url.Action("Registrarse")'><button class = "registrarse">Registrarse</button></a>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+
+<div class="indexView">
+    <h1>Bienvenido a Nuestra Pagina</h1>
+    <div class="botonesIndex">
+        <a href='@Url.Action("Login")'><button class = "acceder">Iniciar Sesion</button></a>
+        <a href='@Url.Action("Registrarse")'><button class = "registrarse">Registrarse</button></a>
+    </div>
+</div>
