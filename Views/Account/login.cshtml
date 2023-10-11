@@ -1,9 +1,21 @@
-<form Action='@Url.Action("VerificarLogin")'>
-    <input type="text" name="Username" placeholder="Nombre de usuario">
-    <input type="password" name="Contraseña" placeholder="Contraseña">
-    <input type="submit" class = "siguiente" value="Siguiente">
+<div class="Logueo">
+<div>
+<form class="loginForm" Action='@Url.Action("VerificarLogin")'>
+    <h3>Nombre de Usuario:</h3>
+    <input type="text" name="Username" placeholder="Username">
+    <h3>Contraseña:</h3>
+    <input type="password" name="Contraseña" placeholder="Password">
+    
+    <input type="submit" class= "siguiente" value="Siguiente">
 </form>
-<a href='@Url.Action("Registrarse")'><button class = "registrarse">Registrarse</button></a>
-<a href='@Url.Action("OlvidoContraseña")'><button class = "Olvido">Olvide mi contraseña</button></a>
+<div class="botnoneslogin">
+    <a href='@Url.Action("OlvidoContraseña")'><button class = "Olvido">Olvide mi contraseña</button></a>
+    <a href='@Url.Action("Registrarse")'><button class = "registrarse">Registrarse</button></a>
+    </div>
+<p class="aviso">@ViewBag.Error</p>
 
-    <p class="aviso">@ViewBag.Error</p>
+</div>
+
+
+
+</div>

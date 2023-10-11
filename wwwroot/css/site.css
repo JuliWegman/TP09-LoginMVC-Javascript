@@ -35,13 +35,14 @@ background-color: rgb(243, 103, 103);
 border-color: rgb(243, 103, 103);
 }
 
-.indexView h1{
+h1{
   text-align: center;
+  margin: 50px;
 }
 
 .indexView button {
   color: #000000;
-  border: 2px solid rgb(216, 2, 134);
+  border: 2px solid #18ce4f;
   border-radius: 0px;
   padding: 18px 36px;
   display: inline-block;
@@ -49,12 +50,14 @@ border-color: rgb(243, 103, 103);
   font-size: 16px;
   letter-spacing: 1px;
   cursor: pointer;
-  box-shadow: inset 0 0 0 0 #D80286;
+  box-shadow: inset 0 0 0 0 #18ce4f;
   -webkit-transition: ease-out 0.4s;
   -moz-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
   width: 250px;
   height: 55px;
+  margin: 150px;
+  margin-top: 250px;
 }
 
 .indexView button:hover {
@@ -64,3 +67,116 @@ border-color: rgb(243, 103, 103);
 .botonesIndex button{
   align-content: center;
 }
+
+.indexView{
+  display: flex;
+  justify-content: center;
+}
+
+.loginForm input[type=text] {
+  width: 450px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.loginForm input[type=password] {
+  width: 450px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.loginForm input[type=submit] {
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  height: 30px;
+  font-size:20px;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  border-radius: 15px;
+  float: right;
+  margin-right: 10%;
+}
+
+.loginForm input[type=submit]:hover{
+  background:#33af92;
+  color:#000000;
+}
+
+.loginForm input[type=submit]:before,input[type=submit]:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+
+.loginForm input[type=submit]:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.loginForm input[type=submit]:hover:before,input[type=submit]:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+.loginForm input[type=text], input[type=password]{
+  display: flex;
+  flex-direction: column;
+}
+
+.registrarse {
+  border: none; 
+  color: black; 
+  padding: 14px 28px; 
+  cursor: pointer; 
+  border-radius: 5px;
+}
+
+.registrarse {background-color: white; border: 2px solid #e7e7e7;} 
+.registrarse:hover {background: #ddd; color: white;}
+
+.Olvido {
+  border: none; 
+  color: black; 
+  padding: 14px 28px; 
+  cursor: pointer; 
+  border-radius: 5px;
+}
+
+.Olvido {background-color: white; border: 2px solid #e7e7e7;} 
+.Olvido:hover {background: #ddd; color: white;}
+
+.botnoneslogin{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 5%;
+  width: 100%;
+
+}
+.Logueo{
+  margin-right: 600px;
+  margin-left: 600px;
+  display :flex;
+  justify-content: center;
+  background-color: darkgrey;
+}
+
+.siguiente{
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.aviso{
+  text-align: center;
+} 
