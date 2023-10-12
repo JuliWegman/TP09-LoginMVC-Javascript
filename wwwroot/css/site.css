@@ -1,3 +1,37 @@
+
+.Input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.acceder {
+  background-color: #ffffff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.siguiente {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.aviso {
+  color: #f00;
+  font-size: 14px;
+}
+
 html {
   font-size: 14px;
   position: relative;
@@ -20,9 +54,7 @@ footer {
   margin: 10px 0px 20px 0px;
 }
 
-.Input{
 
-}
 
 .InputBien{
 background-color:rgb(191, 235, 125);
@@ -180,3 +212,4 @@ h1{
 .aviso{
   text-align: center;
 } 
+
